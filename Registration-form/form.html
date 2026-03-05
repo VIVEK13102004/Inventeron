@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Registration</h2>
+
+<form id="registrationForm" class="form-grid">
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+<small class="error"></small>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+<small class="error"></small>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="text" id="phone" placeholder="Enter phone number">
+<small class="error"></small>
+</div>
+
+<div class="input-group">
+<label>Intership Type</label>
+<select id="internshipType">
+<option value="">Select Intership Type</option>
+<option>Remote</option>
+<option>On-Site</option>
+</select>
+<small class="error"></small>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="Create password">
+<small class="error"></small>
+</div>
+
+<div class="input-group">
+<label>Course</label>
+<select id="course">
+<option value="">Select Course</option>
+<option>Full Stack Development</option>
+<option>Data Science</option>
+<option>Cyber Security</option>
+<option>Cloud Computing</option>
+</select>
+<small class="error"></small>
+</div>
+
+<div class="btn-container">
+<button type="submit">Register</button>
+</div>
+
+</form>
+</div>
+
+
+<!-- Modal -->
+
+<div id="successModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Registration Successful 🎉</h3>
+
+<div id="userDetails"></div>
+
+<button id="closeModal">Close</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

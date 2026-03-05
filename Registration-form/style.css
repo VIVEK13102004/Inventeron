@@ -1,0 +1,164 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#dfe9f3,#ffffff,#e0c3fc);
+background-size:300% 300%;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{background-position:left}
+100%{background-position:right}
+}
+
+.container{
+width:600px;
+padding:35px;
+
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(10px);
+
+border-radius:15px;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+color:#333;
+}
+
+/* grid layout */
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.input-group{
+display:flex;
+flex-direction:column;
+}
+
+label{
+font-size:14px;
+margin-bottom:4px;
+}
+
+input,select{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+transition:0.3s;
+}
+
+input:focus,select:focus{
+outline:none;
+border-color:#8a63ff;
+box-shadow:0 0 6px rgba(138,99,255,0.4);
+}
+
+.error{
+font-size:12px;
+color:red;
+height:12px;
+margin-top:3px;
+}
+
+/* button */
+
+.btn-container{
+grid-column:span 2;
+display:flex;
+justify-content:center;
+margin-top:10px;
+}
+
+button{
+padding:12px 35px;
+border:none;
+border-radius:8px;
+background:#8a63ff;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#6c47ff;
+}
+
+/* modal */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+height:100%;
+width:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:12px;
+width:350px;
+text-align:center;
+animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+from{
+transform:scale(0.6);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+#userDetails{
+text-align:left;
+margin:15px 0;
+}
+
+#closeModal{
+background:#ff5252;
+margin-top:10px;
+}
+
+#closeModal:hover{
+background:#e53935;
+} 
